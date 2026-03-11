@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing - ADIX STUDIO</title>
-  <meta name="description" content="Transparent, flexible pricing for video editing, social media, website development, SEO, graphic design, and photography services at ADIX STUDIO."/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta name="description"
+    content="Transparent, flexible pricing for video editing, social media, website development, SEO, graphic design, and photography services at ADIX STUDIO." />
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     /* ===== PRICING PAGE STYLES ===== */
 
@@ -15,27 +17,47 @@
       padding: 80px 20px 40px;
       position: relative;
     }
+
     .pricing-hero::before {
       content: "";
       position: absolute;
-      top: -80px; left: 50%;
+      top: -80px;
+      left: 50%;
       transform: translateX(-50%);
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(249,199,79,0.08), transparent 65%);
-      z-index: 0; pointer-events: none;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(249, 199, 79, 0.08), transparent 65%);
+      z-index: 0;
+      pointer-events: none;
     }
-    .pricing-hero .tag { animation: fadeInDown 0.7s ease both; }
+
+    .pricing-hero .tag {
+      animation: fadeInDown 0.7s ease both;
+    }
+
     .pricing-hero h1 {
-      font-size: 52px; font-weight: 800; color: #fff;
-      margin: 16px 0 14px; line-height: 1.15;
+      font-size: 52px;
+      font-weight: 800;
+      color: #fff;
+      margin: 16px 0 14px;
+      line-height: 1.15;
       animation: fadeInUp 0.8s ease 0.15s both;
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
     }
-    .pricing-hero h1 span { color: #f9c74f; }
+
+    .pricing-hero h1 span {
+      color: #f9c74f;
+    }
+
     .pricing-hero p {
-      font-size: 17px; color: #b0b8cc; max-width: 520px;
-      margin: 0 auto 20px; animation: fadeInUp 1s ease 0.3s both;
-      position: relative; z-index: 1;
+      font-size: 17px;
+      color: #b0b8cc;
+      max-width: 520px;
+      margin: 0 auto 20px;
+      animation: fadeInUp 1s ease 0.3s both;
+      position: relative;
+      z-index: 1;
     }
 
     /* ===== SECTION DIVIDER ===== */
@@ -43,9 +65,11 @@
       padding: 70px 20px;
       position: relative;
     }
+
     .price-section:nth-child(even) {
-      background: rgba(255,255,255,0.015);
+      background: rgba(255, 255, 255, 0.015);
     }
+
     .price-section-inner {
       max-width: 1200px;
       margin: auto;
@@ -58,20 +82,35 @@
       gap: 16px;
       margin-bottom: 48px;
     }
+
     .section-label-icon {
-      width: 54px; height: 54px;
-      background: linear-gradient(135deg, rgba(249,199,79,0.2), rgba(249,199,79,0.04));
-      border: 1px solid rgba(249,199,79,0.4);
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(135deg, rgba(249, 199, 79, 0.2), rgba(249, 199, 79, 0.04));
+      border: 1px solid rgba(249, 199, 79, 0.4);
       border-radius: 15px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
     }
+
     .section-label-text h2 {
-      font-size: 28px; font-weight: 800; color: #fff; margin: 0 0 4px;
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 4px;
     }
-    .section-label-text h2 span { color: #f9c74f; }
+
+    .section-label-text h2 span {
+      color: #f9c74f;
+    }
+
     .section-label-text p {
-      font-size: 14px; color: #8090b0; margin: 0;
+      font-size: 14px;
+      color: #8090b0;
+      margin: 0;
     }
 
     /* Cards Grid */
@@ -84,7 +123,7 @@
     /* Individual Card */
     .price-card {
       background: linear-gradient(160deg, #0f1b35, #111c36 90%);
-      border: 1px solid rgba(249,199,79,0.1);
+      border: 1px solid rgba(249, 199, 79, 0.1);
       border-radius: 24px;
       padding: 40px 32px 36px;
       position: relative;
@@ -92,518 +131,612 @@
       overflow: hidden;
       animation: scaleIn 0.6s ease both;
     }
-    .price-card:nth-child(1) { animation-delay: 0.05s; }
-    .price-card:nth-child(2) { animation-delay: 0.12s; }
-    .price-card:nth-child(3) { animation-delay: 0.19s; }
-    .price-card:nth-child(4) { animation-delay: 0.26s; }
-    .price-card:nth-child(5) { animation-delay: 0.33s; }
+
+    .price-card:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .price-card:nth-child(2) {
+      animation-delay: 0.12s;
+    }
+
+    .price-card:nth-child(3) {
+      animation-delay: 0.19s;
+    }
+
+    .price-card:nth-child(4) {
+      animation-delay: 0.26s;
+    }
+
+    .price-card:nth-child(5) {
+      animation-delay: 0.33s;
+    }
 
     .price-card::before {
       content: "";
-      position: absolute; inset: 0; border-radius: 24px;
-      background: linear-gradient(135deg, rgba(249,199,79,0.04), transparent);
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(249, 199, 79, 0.04), transparent);
       pointer-events: none;
     }
+
     .price-card:hover {
       transform: translateY(-12px) scale(1.02);
-      border-color: rgba(249,199,79,0.55);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 35px rgba(249,199,79,0.1);
+      border-color: rgba(249, 199, 79, 0.55);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 35px rgba(249, 199, 79, 0.1);
     }
 
     /* Highlight Card */
     .price-card.hot {
-      border-color: rgba(249,199,79,0.4);
-      box-shadow: 0 0 30px rgba(249,199,79,0.1);
+      border-color: rgba(249, 199, 79, 0.4);
+      box-shadow: 0 0 30px rgba(249, 199, 79, 0.1);
     }
+
     .price-card.hot:hover {
       border-color: #f9c74f;
-      box-shadow: 0 0 50px rgba(249,199,79,0.25), 0 24px 60px rgba(0,0,0,0.55);
+      box-shadow: 0 0 50px rgba(249, 199, 79, 0.25), 0 24px 60px rgba(0, 0, 0, 0.55);
     }
 
     /* Ribbon Badge */
     .ribbon {
       position: absolute;
-      top: 0; right: 0;
+      top: 0;
+      right: 0;
       background: linear-gradient(135deg, #f9c74f, #f7b130);
       color: #000;
-      font-size: 10px; font-weight: 800;
+      font-size: 10px;
+      font-weight: 800;
       padding: 7px 16px;
       border-radius: 0 24px 0 16px;
-      text-transform: uppercase; letter-spacing: 0.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       animation: pulseBadge 2s infinite;
     }
 
     /* Card Name */
     .price-card h3 {
-      font-size: 16px; font-weight: 700; color: #90a0c0;
-      text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #90a0c0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 12px;
     }
 
     /* Price */
     .price-value {
-      font-size: 40px; font-weight: 900; color: #f9c74f;
-      margin: 0 0 6px; letter-spacing: -1px; line-height: 1;
+      font-size: 40px;
+      font-weight: 900;
+      color: #f9c74f;
+      margin: 0 0 6px;
+      letter-spacing: -1px;
+      line-height: 1;
     }
+
     .price-value .unit {
-      font-size: 16px; font-weight: 500; color: #8090b0;
-      letter-spacing: 0; margin-left: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #8090b0;
+      letter-spacing: 0;
+      margin-left: 2px;
     }
 
     /* Divider */
     .price-divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(249,199,79,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(249, 199, 79, 0.3), transparent);
       margin: 20px 0;
     }
 
     /* Features List */
     .price-card ul {
-      list-style: none; padding: 0; margin: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
+
     .price-card ul li {
-      font-size: 14px; color: #c5cfe0;
+      font-size: 14px;
+      color: #c5cfe0;
       padding: 9px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .price-card ul li:last-child { border-bottom: none; }
+
+    .price-card ul li:last-child {
+      border-bottom: none;
+    }
+
     .price-card ul li::before {
-      content: "✓"; color: #f9c74f; font-weight: 800; font-size: 13px; flex-shrink: 0;
+      content: "✓";
+      color: #f9c74f;
+      font-weight: 800;
+      font-size: 13px;
+      flex-shrink: 0;
     }
 
     /* ===== WHATSAPP FLOATING CTA ===== */
     .float-cta {
       position: fixed;
-      bottom: 28px; right: 24px;
+      bottom: 28px;
+      right: 24px;
       background: linear-gradient(135deg, #25D366, #20c854);
       color: #fff;
-      font-weight: 700; font-size: 14px;
+      font-weight: 700;
+      font-size: 14px;
       padding: 14px 24px;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 8px 28px rgba(37,211,102,0.35);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35);
       transition: all 0.3s ease;
       z-index: 500;
-      display: flex; align-items: center; gap: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       animation: fadeInUp 1s ease 0.8s both;
     }
+
     .float-cta:hover {
       transform: translateY(-4px) scale(1.04);
-      box-shadow: 0 14px 40px rgba(37,211,102,0.55);
+      box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55);
     }
 
     /* ===== BOTTOM CTA ===== */
     .bottom-cta {
-      background: linear-gradient(135deg, rgba(249,199,79,0.12), rgba(249,199,79,0.03));
-      border: 1px solid rgba(249,199,79,0.22);
+      background: linear-gradient(135deg, rgba(249, 199, 79, 0.12), rgba(249, 199, 79, 0.03));
+      border: 1px solid rgba(249, 199, 79, 0.22);
       border-radius: 28px;
       padding: 70px 40px;
       text-align: center;
       margin: 30px 20px 80px;
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+
     .bottom-cta::before {
       content: "";
-      position: absolute; top: -80px; left: 50%;
+      position: absolute;
+      top: -80px;
+      left: 50%;
       transform: translateX(-50%);
-      width: 500px; height: 400px;
-      background: radial-gradient(circle, rgba(249,199,79,0.07), transparent 70%);
+      width: 500px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(249, 199, 79, 0.07), transparent 70%);
       pointer-events: none;
     }
+
     .bottom-cta h2 {
-      font-size: 36px; font-weight: 800;
+      font-size: 36px;
+      font-weight: 800;
       background: linear-gradient(135deg, #fff, #f9c74f);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; margin: 0 0 14px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 14px;
     }
-    .bottom-cta p { color: #b0b8cc; font-size: 16px; margin: 0 0 30px; }
+
+    .bottom-cta p {
+      color: #b0b8cc;
+      font-size: 16px;
+      margin: 0 0 30px;
+    }
+
     .contact-cta {
       display: inline-block;
       background: linear-gradient(135deg, #f9c74f, #f7b130);
-      color: #000; font-weight: 700; font-size: 15px;
-      text-transform: uppercase; letter-spacing: 0.5px;
-      padding: 16px 44px; border-radius: 14px;
+      color: #000;
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 16px 44px;
+      border-radius: 14px;
       text-decoration: none;
-      box-shadow: 0 8px 25px rgba(249,199,79,0.25);
+      box-shadow: 0 8px 25px rgba(249, 199, 79, 0.25);
       transition: all 0.3s ease;
     }
+
     .contact-cta:hover {
       transform: translateY(-3px);
-      box-shadow: 0 14px 40px rgba(249,199,79,0.45);
+      box-shadow: 0 14px 40px rgba(249, 199, 79, 0.45);
     }
 
     @media (max-width: 768px) {
-      .pricing-hero h1 { font-size: 32px; }
-      .price-grid { grid-template-columns: 1fr; }
-      .section-label-text h2 { font-size: 20px; }
-      .bottom-cta h2 { font-size: 24px; }
-      .float-cta span { display: none; }
-      .float-cta { padding: 14px 18px; font-size: 20px; }
+      .pricing-hero h1 {
+        font-size: 32px;
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-label-text h2 {
+        font-size: 20px;
+      }
+
+      .bottom-cta h2 {
+        font-size: 24px;
+      }
+
+      .float-cta span {
+        display: none;
+      }
+
+      .float-cta {
+        padding: 14px 18px;
+        font-size: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header class="navbar">
-  <div class="logo">ADIX<span>STUDIO</span></div>
-  <nav class="nav-links">
-    <a href="INDEX.HTML">Home</a>
-    <a href="SERVICE.HTML">Services</a>
-    <a href="PRICING.HTML">Pricing</a>
-    <a href="CONTACT.HTML">Contact</a>
-  </nav>
-  <div class="menu-toggle">☰</div>
-</header>
+  <header class="navbar">
+    <div class="logo">ADIX<span>STUDIO</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle">☰</div>
+  </header>
 
-<!-- Hero -->
-<section class="pricing-hero">
-  <div class="tag">✦ Transparent Pricing</div>
-  <h1>Plans Built for <span>Every Vision</span></h1>
-  <p>No hidden fees. No surprises. Handcrafted packages designed to deliver real results for your brand and business.</p>
-</section>
+  <!-- Hero -->
+  <section class="pricing-hero">
+    <div class="tag">✦ Transparent Pricing</div>
+    <h1>Plans Built for <span>Every Vision</span></h1>
+    <p>No hidden fees. No surprises. Handcrafted packages designed to deliver real results for your brand and business.
+    </p>
+  </section>
 
-<!-- ===== 1. Social Media Management ===== -->
-<section class="price-section">
-  <div class="price-section-inner">
-    <div class="section-label">
-      <div class="section-label-icon">📱</div>
-      <div class="section-label-text">
-        <h2>Social Media <span>Management</span></h2>
-        <p>Grow your brand presence across all platforms</p>
+  <!-- ===== 1. Social Media Management ===== -->
+  <section class="price-section">
+    <div class="price-section-inner">
+      <div class="section-label">
+        <div class="section-label-icon">📱</div>
+        <div class="section-label-text">
+          <h2>Social Media <span>Management</span></h2>
+          <p>Grow your brand presence across all platforms</p>
+        </div>
+      </div>
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h3>Startup</h3>
+          <div class="price-value">₹4,999 <span class="unit">/mo</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>3 Posts / Week</li>
+            <li>Basic Engagement</li>
+            <li>Basic Page Audit</li>
+            <li>Content Creation</li>
+            <li>Basic Analytics</li>
+          </ul>
+        </div>
+
+        <div class="price-card hot">
+          <div class="ribbon">Most Popular</div>
+          <h3>Growth</h3>
+          <div class="price-value">₹9,499 <span class="unit">/mo</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Daily Posts &amp; Stories</li>
+            <li>Professional Reels</li>
+            <li>Hashtag &amp; Strategy</li>
+            <li>Influencer Outreach</li>
+            <li>Ad Campaign Setup</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Enterprise</h3>
+          <div class="price-value">₹29,999 <span class="unit">/mo</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Full Branding</li>
+            <li>Paid Ad Management</li>
+            <li>Monthly Reports</li>
+            <li>24/7 Support</li>
+            <li>Advanced Analytics</li>
+          </ul>
+        </div>
+
       </div>
     </div>
-    <div class="price-grid">
+  </section>
 
-      <div class="price-card">
-        <h3>Startup</h3>
-        <div class="price-value">₹4,999 <span class="unit">/mo</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>3 Posts / Week</li>
-          <li>Basic Engagement</li>
-          <li>Basic Page Audit</li>
-          <li>Content Creation</li>
-          <li>Basic Analytics</li>
-        </ul>
+  <!-- ===== 2. Website Development ===== -->
+  <section class="price-section">
+    <div class="price-section-inner">
+      <div class="section-label">
+        <div class="section-label-icon">💻</div>
+        <div class="section-label-text">
+          <h2>Website <span>Development</span></h2>
+          <p>Modern, fast and conversion-optimised websites</p>
+        </div>
       </div>
+      <div class="price-grid">
 
-      <div class="price-card hot">
-        <div class="ribbon">Most Popular</div>
-        <h3>Growth</h3>
-        <div class="price-value">₹9,499 <span class="unit">/mo</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Daily Posts &amp; Stories</li>
-          <li>Professional Reels</li>
-          <li>Hashtag &amp; Strategy</li>
-          <li>Influencer Outreach</li>
-          <li>Ad Campaign Setup</li>
-        </ul>
+        <div class="price-card">
+          <h3>Basic</h3>
+          <div class="price-value">₹15,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>5-Page Static Website</li>
+            <li>Responsive Design</li>
+            <li>Basic SEO Setup</li>
+            <li>Contact Form</li>
+          </ul>
+        </div>
+
+        <div class="price-card hot">
+          <div class="ribbon">Most Popular</div>
+          <h3>Pro</h3>
+          <div class="price-value">₹35,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Dynamic Website with CMS</li>
+            <li>E-commerce Integration</li>
+            <li>Advanced SEO</li>
+            <li>Analytics Setup</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Premium</h3>
+          <div class="price-value">₹75,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Custom Web Application</li>
+            <li>Full Branding</li>
+            <li>API Integrations</li>
+            <li>Ongoing Maintenance</li>
+          </ul>
+        </div>
+
       </div>
-
-      <div class="price-card">
-        <h3>Enterprise</h3>
-        <div class="price-value">₹29,999 <span class="unit">/mo</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Full Branding</li>
-          <li>Paid Ad Management</li>
-          <li>Monthly Reports</li>
-          <li>24/7 Support</li>
-          <li>Advanced Analytics</li>
-        </ul>
-      </div>
-
     </div>
+  </section>
+
+  <!-- ===== 3. SEO Services ===== -->
+  <section class="price-section">
+    <div class="price-section-inner">
+      <div class="section-label">
+        <div class="section-label-icon">🔍</div>
+        <div class="section-label-text">
+          <h2>SEO <span>Services</span></h2>
+          <p>Rank higher, get found, and drive organic traffic</p>
+        </div>
+      </div>
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h3>Basic</h3>
+          <div class="price-value">₹10,000 <span class="unit">/mo</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Keyword Research</li>
+            <li>On-Page Optimization</li>
+            <li>Monthly Reports</li>
+            <li>Basic Backlink Analysis</li>
+          </ul>
+        </div>
+
+        <div class="price-card hot">
+          <div class="ribbon">Most Popular</div>
+          <h3>Pro</h3>
+          <div class="price-value">₹25,000 <span class="unit">/mo</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Advanced Keyword Strategy</li>
+            <li>Content Optimization</li>
+            <li>Competitor Analysis</li>
+            <li>Local SEO</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Premium</h3>
+          <div class="price-value">₹50,000 <span class="unit">/mo</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Full SEO Audit</li>
+            <li>Link Building Campaign</li>
+            <li>Technical SEO</li>
+            <li>Conversion Optimization</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. Graphic Design ===== -->
+  <section class="price-section">
+    <div class="price-section-inner">
+      <div class="section-label">
+        <div class="section-label-icon">🎨</div>
+        <div class="section-label-text">
+          <h2>Graphic <span>Design</span></h2>
+          <p>Visuals that make your brand impossible to ignore</p>
+        </div>
+      </div>
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h3>Basic</h3>
+          <div class="price-value">₹5,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Logo Design</li>
+            <li>Business Card</li>
+            <li>2 Revisions</li>
+            <li>Source Files</li>
+          </ul>
+        </div>
+
+        <div class="price-card hot">
+          <div class="ribbon">Most Popular</div>
+          <h3>Pro</h3>
+          <div class="price-value">₹12,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Brand Identity Package</li>
+            <li>Social Media Graphics</li>
+            <li>5 Revisions</li>
+            <li>Print Ready Files</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Premium</h3>
+          <div class="price-value">₹25,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Complete Branding</li>
+            <li>Marketing Materials</li>
+            <li>Unlimited Revisions</li>
+            <li>Brand Guidelines</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Photography & Videography Shoots ===== -->
+  <section class="price-section">
+    <div class="price-section-inner">
+      <div class="section-label">
+        <div class="section-label-icon">📸</div>
+        <div class="section-label-text">
+          <h2>Personal Photography &amp; <span>Videography Shoots</span></h2>
+          <p>Cinematic content creation for individuals and creators</p>
+        </div>
+      </div>
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h3>Basic Reel Shoot</h3>
+          <div class="price-value">₹1,500</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>1 Reel (15–30 seconds)</li>
+            <li>Shoot + Basic Editing</li>
+            <li>Music &amp; Text</li>
+            <li>1 Revision Included</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Standard Shoot</h3>
+          <div class="price-value">₹2,500</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>2 Reels</li>
+            <li>Shoot + Clean Editing</li>
+            <li>Color Correction</li>
+            <li>1 Revision Included</li>
+          </ul>
+        </div>
+
+        <div class="price-card hot">
+          <div class="ribbon">Best Value</div>
+          <h3>Premium Shoot</h3>
+          <div class="price-value">₹4,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>3–4 Reels</li>
+            <li>Shoot + Cinematic Shots</li>
+            <li>Advanced Editing</li>
+            <li>1 Revision Included</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Photo + Video Combo</h3>
+          <div class="price-value">₹3,500</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>10–15 Edited Photos</li>
+            <li>1 Reel</li>
+            <li>Basic Editing</li>
+            <li>1 Revision Included</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Creator / Influencer Pack</h3>
+          <div class="price-value">₹5,000</div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>20 Edited Photos</li>
+            <li>3 Reels</li>
+            <li>Advanced Editing</li>
+            <li>1 Revision Included</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. Additional Services ===== -->
+  <section class="price-section">
+    <div class="price-section-inner">
+      <div class="section-label">
+        <div class="section-label-icon">⚡</div>
+        <div class="section-label-text">
+          <h2>Additional <span>Services</span></h2>
+          <p>Flexible add-ons to fit any project</p>
+        </div>
+      </div>
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h3>Editing Only</h3>
+          <div class="price-value">₹1,000 <span class="unit">/reel</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Reel Editing</li>
+            <li>Per Reel Basis</li>
+            <li>Shoot Not Included</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Hourly Shoot</h3>
+          <div class="price-value">₹1,500 <span class="unit">/hour</span></div>
+          <div class="price-divider"></div>
+          <ul>
+            <li>Shooting Only</li>
+            <li>Editing Extra</li>
+            <li>Pay-as-you-go</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <div class="bottom-cta">
+    <h2>Let's Build Something Great Together</h2>
+    <p>Have a custom requirement or need a quote? Get in touch — we'll tailor a package just for you.</p>
+    <a href="contact.html" class="contact-cta">Contact Us →</a>
   </div>
-</section>
 
-<!-- ===== 2. Website Development ===== -->
-<section class="price-section">
-  <div class="price-section-inner">
-    <div class="section-label">
-      <div class="section-label-icon">💻</div>
-      <div class="section-label-text">
-        <h2>Website <span>Development</span></h2>
-        <p>Modern, fast and conversion-optimised websites</p>
-      </div>
-    </div>
-    <div class="price-grid">
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/919999999999" target="_blank" class="float-cta" aria-label="Chat on WhatsApp">
+    💬 <span>Chat on WhatsApp</span>
+  </a>
 
-      <div class="price-card">
-        <h3>Basic</h3>
-        <div class="price-value">₹15,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>5-Page Static Website</li>
-          <li>Responsive Design</li>
-          <li>Basic SEO Setup</li>
-          <li>Contact Form</li>
-        </ul>
-      </div>
-
-      <div class="price-card hot">
-        <div class="ribbon">Most Popular</div>
-        <h3>Pro</h3>
-        <div class="price-value">₹35,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Dynamic Website with CMS</li>
-          <li>E-commerce Integration</li>
-          <li>Advanced SEO</li>
-          <li>Analytics Setup</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Premium</h3>
-        <div class="price-value">₹75,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Custom Web Application</li>
-          <li>Full Branding</li>
-          <li>API Integrations</li>
-          <li>Ongoing Maintenance</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== 3. SEO Services ===== -->
-<section class="price-section">
-  <div class="price-section-inner">
-    <div class="section-label">
-      <div class="section-label-icon">🔍</div>
-      <div class="section-label-text">
-        <h2>SEO <span>Services</span></h2>
-        <p>Rank higher, get found, and drive organic traffic</p>
-      </div>
-    </div>
-    <div class="price-grid">
-
-      <div class="price-card">
-        <h3>Basic</h3>
-        <div class="price-value">₹10,000 <span class="unit">/mo</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Keyword Research</li>
-          <li>On-Page Optimization</li>
-          <li>Monthly Reports</li>
-          <li>Basic Backlink Analysis</li>
-        </ul>
-      </div>
-
-      <div class="price-card hot">
-        <div class="ribbon">Most Popular</div>
-        <h3>Pro</h3>
-        <div class="price-value">₹25,000 <span class="unit">/mo</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Advanced Keyword Strategy</li>
-          <li>Content Optimization</li>
-          <li>Competitor Analysis</li>
-          <li>Local SEO</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Premium</h3>
-        <div class="price-value">₹50,000 <span class="unit">/mo</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Full SEO Audit</li>
-          <li>Link Building Campaign</li>
-          <li>Technical SEO</li>
-          <li>Conversion Optimization</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== 4. Graphic Design ===== -->
-<section class="price-section">
-  <div class="price-section-inner">
-    <div class="section-label">
-      <div class="section-label-icon">🎨</div>
-      <div class="section-label-text">
-        <h2>Graphic <span>Design</span></h2>
-        <p>Visuals that make your brand impossible to ignore</p>
-      </div>
-    </div>
-    <div class="price-grid">
-
-      <div class="price-card">
-        <h3>Basic</h3>
-        <div class="price-value">₹5,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Logo Design</li>
-          <li>Business Card</li>
-          <li>2 Revisions</li>
-          <li>Source Files</li>
-        </ul>
-      </div>
-
-      <div class="price-card hot">
-        <div class="ribbon">Most Popular</div>
-        <h3>Pro</h3>
-        <div class="price-value">₹12,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Brand Identity Package</li>
-          <li>Social Media Graphics</li>
-          <li>5 Revisions</li>
-          <li>Print Ready Files</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Premium</h3>
-        <div class="price-value">₹25,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Complete Branding</li>
-          <li>Marketing Materials</li>
-          <li>Unlimited Revisions</li>
-          <li>Brand Guidelines</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== 5. Photography & Videography Shoots ===== -->
-<section class="price-section">
-  <div class="price-section-inner">
-    <div class="section-label">
-      <div class="section-label-icon">📸</div>
-      <div class="section-label-text">
-        <h2>Personal Photography &amp; <span>Videography Shoots</span></h2>
-        <p>Cinematic content creation for individuals and creators</p>
-      </div>
-    </div>
-    <div class="price-grid">
-
-      <div class="price-card">
-        <h3>Basic Reel Shoot</h3>
-        <div class="price-value">₹1,500</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>1 Reel (15–30 seconds)</li>
-          <li>Shoot + Basic Editing</li>
-          <li>Music &amp; Text</li>
-          <li>1 Revision Included</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Standard Shoot</h3>
-        <div class="price-value">₹2,500</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>2 Reels</li>
-          <li>Shoot + Clean Editing</li>
-          <li>Color Correction</li>
-          <li>1 Revision Included</li>
-        </ul>
-      </div>
-
-      <div class="price-card hot">
-        <div class="ribbon">Best Value</div>
-        <h3>Premium Shoot</h3>
-        <div class="price-value">₹4,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>3–4 Reels</li>
-          <li>Shoot + Cinematic Shots</li>
-          <li>Advanced Editing</li>
-          <li>1 Revision Included</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Photo + Video Combo</h3>
-        <div class="price-value">₹3,500</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>10–15 Edited Photos</li>
-          <li>1 Reel</li>
-          <li>Basic Editing</li>
-          <li>1 Revision Included</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Creator / Influencer Pack</h3>
-        <div class="price-value">₹5,000</div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>20 Edited Photos</li>
-          <li>3 Reels</li>
-          <li>Advanced Editing</li>
-          <li>1 Revision Included</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== 6. Additional Services ===== -->
-<section class="price-section">
-  <div class="price-section-inner">
-    <div class="section-label">
-      <div class="section-label-icon">⚡</div>
-      <div class="section-label-text">
-        <h2>Additional <span>Services</span></h2>
-        <p>Flexible add-ons to fit any project</p>
-      </div>
-    </div>
-    <div class="price-grid">
-
-      <div class="price-card">
-        <h3>Editing Only</h3>
-        <div class="price-value">₹1,000 <span class="unit">/reel</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Reel Editing</li>
-          <li>Per Reel Basis</li>
-          <li>Shoot Not Included</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Hourly Shoot</h3>
-        <div class="price-value">₹1,500 <span class="unit">/hour</span></div>
-        <div class="price-divider"></div>
-        <ul>
-          <li>Shooting Only</li>
-          <li>Editing Extra</li>
-          <li>Pay-as-you-go</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Bottom CTA -->
-<div class="bottom-cta">
-  <h2>Let's Build Something Great Together</h2>
-  <p>Have a custom requirement or need a quote? Get in touch — we'll tailor a package just for you.</p>
-  <a href="CONTACT.HTML" class="contact-cta">Contact Us →</a>
-</div>
-
-<!-- Floating WhatsApp CTA -->
-<a href="https://wa.me/919999999999" target="_blank" class="float-cta" aria-label="Chat on WhatsApp">
-  💬 <span>Chat on WhatsApp</span>
-</a>
-
-<script src="SCRIPT/script.js"></script>
+  <script src="SCRIPT/script.js"></script>
 </body>
+
 </html>

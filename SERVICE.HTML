@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - ADIX STUDIO</title>
+  <meta name="description" content="Explore all creative services offered by ADIX STUDIO — video editing, social media management, website development, SEO, graphic design, and photography/videography shoots."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ===== SERVICE PAGE SPECIFIC ===== */
+    .services-hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      position: relative;
+    }
+    .services-hero::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(249,199,79,0.07), transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .services-hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 16px;
+      animation: fadeInUp 0.8s ease both;
+      position: relative;
+      z-index: 1;
+    }
+    .services-hero h1 span { color: #f9c74f; }
+    .services-hero p {
+      font-size: 17px;
+      color: #b0b8cc;
+      max-width: 560px;
+      margin: 0 auto 28px;
+      animation: fadeInUp 1s ease 0.2s both;
+      position: relative;
+      z-index: 1;
+    }
+    .services-hero .tag { animation: fadeInDown 0.8s ease 0.1s both; }
+
+    /* ===== SERVICE CATEGORY SECTIONS ===== */
+    .service-category {
+      padding: 60px 20px;
+    }
+    .service-category:nth-child(even) {
+      background: rgba(255,255,255,0.015);
+    }
+    .service-category .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .category-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, rgba(249,199,79,0.2), rgba(249,199,79,0.05));
+      border: 1px solid rgba(249,199,79,0.35);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .category-header h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .category-header h2 span { color: #f9c74f; }
+
+    /* ===== SERVICE CARDS GRID ===== */
+    .service-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: linear-gradient(145deg, #0f1b35, #111c36);
+      border: 1px solid rgba(249,199,79,0.1);
+      border-radius: 20px;
+      padding: 32px 28px;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      animation: scaleIn 0.6s ease both;
+    }
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(249,199,79,0.04), transparent);
+      pointer-events: none;
+    }
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: rgba(249,199,79,0.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(249,199,79,0.08);
+    }
+    .service-card.popular {
+      border-color: rgba(249,199,79,0.35);
+      box-shadow: 0 0 20px rgba(249,199,79,0.08);
+    }
+    .service-card .card-badge {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: linear-gradient(135deg, #f9c74f, #f7b130);
+      color: #000;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      animation: pulseBadge 2s infinite;
+    }
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #f9c74f;
+      margin: 0 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .service-card ul li {
+      font-size: 14px;
+      color: #c5cfe0;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-card ul li:last-child { border-bottom: none; }
+    .service-card ul li::before {
+      content: "✓";
+      color: #f9c74f;
+      font-weight: 800;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ===== VIEW PRICING CTA ===== */
+    .pricing-cta {
+      background: linear-gradient(135deg, rgba(249,199,79,0.12), rgba(249,199,79,0.04));
+      border: 1px solid rgba(249,199,79,0.25);
+      border-radius: 28px;
+      padding: 70px 40px;
+      text-align: center;
+      margin: 60px 20px 80px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+    .pricing-cta::before {
+      content: "";
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(249,199,79,0.07), transparent 70%);
+      pointer-events: none;
+    }
+    .pricing-cta h2 {
+      font-size: 34px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #f9c74f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 14px;
+    }
+    .pricing-cta p {
+      color: #b0b8cc;
+      font-size: 16px;
+      margin: 0 0 30px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #f9c74f, #f7b130);
+      color: #000;
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 16px 44px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(249,199,79,0.25);
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 40px rgba(249,199,79,0.45);
+      background: linear-gradient(135deg, #f7b130, #f5a00d);
+    }
+
+    @media (max-width: 768px) {
+      .services-hero h1 { font-size: 32px; }
+      .service-cards-grid { grid-template-columns: 1fr; }
+      .category-header h2 { font-size: 20px; }
+      .pricing-cta h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">ADIX<span>STUDIO</span></div>
+  <nav class="nav-links">
+    <a href="INDEX.HTML">Home</a>
+    <a href="SERVICE.HTML">Services</a>
+    <a href="PRICING.HTML">Pricing</a>
+    <a href="CONTACT.HTML">Contact</a>
+  </nav>
+  <div class="menu-toggle">☰</div>
+</header>
+
+<!-- Hero -->
+<section class="services-hero">
+  <div class="tag">✦ What We Offer</div>
+  <h1>Our <span>Creative</span> Services</h1>
+  <p>From cinematic video editing to full-scale digital marketing — we craft experiences that captivate, convert, and grow your brand.</p>
+</section>
+
+<!-- 1. Video Editing -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">🎬</div>
+      <h2>Video <span>Editing</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Basic</h3>
+        <ul>
+          <li>Simple Cuts &amp; Stitching</li>
+          <li>Basic Color Correction</li>
+          <li>1080p Export</li>
+          <li>Fast Turnaround</li>
+        </ul>
+      </div>
+      <div class="service-card popular">
+        <div class="card-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <ul>
+          <li>Advanced Transitions</li>
+          <li>Cinematic Sound Design</li>
+          <li>Motion Graphics</li>
+          <li>Subtitles &amp; Captions</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Premium</h3>
+        <ul>
+          <li>4K Cinematic Grade</li>
+          <li>Unlimited Revisions</li>
+          <li>Custom VFX</li>
+          <li>Priority Delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Social Media Management -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">📱</div>
+      <h2>Social Media <span>Management</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Startup</h3>
+        <ul>
+          <li>3 Posts / Week</li>
+          <li>Basic Engagement</li>
+          <li>Basic Page Audit</li>
+          <li>Content Creation</li>
+          <li>Basic Analytics</li>
+        </ul>
+      </div>
+      <div class="service-card popular">
+        <div class="card-badge">Most Popular</div>
+        <h3>Growth</h3>
+        <ul>
+          <li>Daily Posts &amp; Stories</li>
+          <li>Professional Reels</li>
+          <li>Hashtag &amp; Strategy</li>
+          <li>Influencer Outreach</li>
+          <li>Ad Campaign Setup</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Enterprise</h3>
+        <ul>
+          <li>Full Branding</li>
+          <li>Paid Ad Management</li>
+          <li>Monthly Reports</li>
+          <li>24/7 Support</li>
+          <li>Advanced Analytics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Website Development -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">💻</div>
+      <h2>Website <span>Development</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Basic</h3>
+        <ul>
+          <li>5-Page Static Website</li>
+          <li>Responsive Design</li>
+          <li>Basic SEO Setup</li>
+          <li>Contact Form</li>
+        </ul>
+      </div>
+      <div class="service-card popular">
+        <div class="card-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <ul>
+          <li>Dynamic Website with CMS</li>
+          <li>E-commerce Integration</li>
+          <li>Advanced SEO</li>
+          <li>Analytics Setup</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Premium</h3>
+        <ul>
+          <li>Custom Web Application</li>
+          <li>Full Branding</li>
+          <li>API Integrations</li>
+          <li>Ongoing Maintenance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SEO Services -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">🔍</div>
+      <h2>SEO <span>Services</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Basic</h3>
+        <ul>
+          <li>Keyword Research</li>
+          <li>On-Page Optimization</li>
+          <li>Monthly Reports</li>
+          <li>Basic Backlink Analysis</li>
+        </ul>
+      </div>
+      <div class="service-card popular">
+        <div class="card-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <ul>
+          <li>Advanced Keyword Strategy</li>
+          <li>Content Optimization</li>
+          <li>Competitor Analysis</li>
+          <li>Local SEO</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Premium</h3>
+        <ul>
+          <li>Full SEO Audit</li>
+          <li>Link Building Campaign</li>
+          <li>Technical SEO</li>
+          <li>Conversion Optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Graphic Design -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">🎨</div>
+      <h2>Graphic <span>Design</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Basic</h3>
+        <ul>
+          <li>Logo Design</li>
+          <li>Business Card</li>
+          <li>2 Revisions</li>
+          <li>Source Files</li>
+        </ul>
+      </div>
+      <div class="service-card popular">
+        <div class="card-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <ul>
+          <li>Brand Identity Package</li>
+          <li>Social Media Graphics</li>
+          <li>5 Revisions</li>
+          <li>Print Ready Files</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Premium</h3>
+        <ul>
+          <li>Complete Branding</li>
+          <li>Marketing Materials</li>
+          <li>Unlimited Revisions</li>
+          <li>Brand Guidelines</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Photography & Videography Shoots -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">📸</div>
+      <h2>Photography &amp; <span>Videography Shoots</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Basic Reel Shoot</h3>
+        <ul>
+          <li>1 Reel (15–30 seconds)</li>
+          <li>Shoot + Basic Editing</li>
+          <li>Music &amp; Text</li>
+          <li>1 Revision Included</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Standard Shoot</h3>
+        <ul>
+          <li>2 Reels</li>
+          <li>Shoot + Clean Editing</li>
+          <li>Color Correction</li>
+          <li>1 Revision Included</li>
+        </ul>
+      </div>
+      <div class="service-card popular">
+        <div class="card-badge">Best Value</div>
+        <h3>Premium Shoot</h3>
+        <ul>
+          <li>3–4 Reels</li>
+          <li>Shoot + Cinematic Shots</li>
+          <li>Advanced Editing</li>
+          <li>1 Revision Included</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Photo + Video Combo</h3>
+        <ul>
+          <li>10–15 Edited Photos</li>
+          <li>1 Reel</li>
+          <li>Basic Editing</li>
+          <li>1 Revision Included</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Creator / Influencer Pack</h3>
+        <ul>
+          <li>20 Edited Photos</li>
+          <li>3 Reels</li>
+          <li>Advanced Editing</li>
+          <li>1 Revision Included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Additional Services -->
+<section class="service-category">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon">⚡</div>
+      <h2>Additional <span>Services</span></h2>
+    </div>
+    <div class="service-cards-grid">
+      <div class="service-card">
+        <h3>Editing Only</h3>
+        <ul>
+          <li>Reel Editing</li>
+          <li>Per Reel Basis</li>
+          <li>Shoot Not Included</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Hourly Shoot</h3>
+        <ul>
+          <li>Shooting Only</li>
+          <li>Editing Extra</li>
+          <li>Pay-as-you-go</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing CTA -->
+<div class="pricing-cta">
+  <h2>Ready to Know Our Rates?</h2>
+  <p>Every package is designed to deliver maximum value. Explore our transparent pricing and pick the plan that suits your goals.</p>
+  <a href="PRICING.HTML" class="cta-btn">View Full Pricing →</a>
+</div>
+
+<script src="SCRIPT/script.js"></script>
+</body>
+</html>

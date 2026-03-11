@@ -23,7 +23,7 @@
       text-align: center;
       padding: 100px 20px 80px;
       position: relative;
-      overflow: hidden;
+      overflow: hidden; /* CRITICAL: Contain background blobs */
     }
 
     /* animated background blobs */
@@ -973,6 +973,18 @@
     @media (max-width: 768px) {
       .hero {
         padding-top: 80px;
+      }
+      .hero::before {
+        width: 300px; /* Scale down blobs */
+        height: 300px;
+        top: -50px;
+        left: -50px;
+      }
+      .hero::after {
+        width: 250px;
+        height: 250px;
+        bottom: -50px;
+        right: -30px;
       }
       .hero-content {
         padding: 0 10px;

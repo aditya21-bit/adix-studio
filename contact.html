@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - ADIX STUDIO</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -18,7 +20,7 @@
       <a href="contact.html ">Contact</a>
     </nav>
 
-    <div class="menu-toggle">☰</div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
   </header>
 
   <section class="contact-section">
@@ -79,6 +81,14 @@
   </section>
 
 
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>

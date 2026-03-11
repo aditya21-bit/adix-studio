@@ -116,7 +116,7 @@
     /* Cards Grid */
     .price-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 28px;
     }
 
@@ -346,19 +346,11 @@
 
     @media (max-width: 768px) {
       .pricing-hero h1 {
-        font-size: 32px;
-      }
-
-      .price-grid {
-        grid-template-columns: 1fr;
+        font-size: clamp(32px, 8vw, 48px);
       }
 
       .section-label-text h2 {
-        font-size: 20px;
-      }
-
-      .bottom-cta h2 {
-        font-size: 24px;
+        font-size: 22px;
       }
 
       .float-cta span {
@@ -368,6 +360,25 @@
       .float-cta {
         padding: 14px 18px;
         font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pricing-hero {
+        padding: 60px 20px 30px;
+      }
+      .pricing-hero p {
+        font-size: 15px;
+      }
+      .price-section {
+        padding: 40px 20px;
+      }
+      .bottom-cta {
+        padding: 50px 20px;
+        margin: 20px 15px 60px;
+      }
+      .bottom-cta h2 {
+        font-size: 24px;
       }
     }
   </style>

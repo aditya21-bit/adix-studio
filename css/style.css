@@ -11,6 +11,26 @@ body {
   color: #e0e0e0;
   padding-top: 70px;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Fluid Typography */
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
 }
 
 /* NAVBAR PREMIUM GLOSSY */
@@ -136,17 +156,19 @@ body {
   }
 
   .nav-links.active {
-    max-height: 400px;
+    max-height: 50vh; /* Better than fixed pixel */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   }
 
   .nav-links a {
-    padding: 15px 25px;
-    text-align: left;
+    padding: 20px 30px; /* Larger hit targets */
+    text-align: center; /* Center for mobile appeal */
     display: block;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 14px;
+    font-size: 16px; /* Slightly larger */
     width: 100%;
     box-sizing: border-box;
+    transition: background 0.3s ease;
   }
 
   .nav-links a::after {
@@ -176,6 +198,12 @@ body {
 
   .menu-toggle.active {
     color: #f9c74f;
+  }
+
+  /* Padding for section titles on mobile */
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 30px;
   }
 }
 
@@ -279,7 +307,6 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-}
 }
 
 .hero h1 {

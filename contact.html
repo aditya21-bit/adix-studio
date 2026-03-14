@@ -34,10 +34,9 @@
         <!-- Contact Form Card -->
         <div class="contact-card">
           <h3>Send us a Message</h3>
-          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <form id="contactForm" class="contact-form">
             <input type="hidden" name="access_key" value="43e2b402-4a95-4cb8-9663-e37cb218903b">
-            <!-- Optional: redirect to a specific success page -->
-            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <!-- No redirect needed since we use AJAX -->
             
             <div class="form-group">
               <input type="text" name="name" placeholder="Your Name" required>
@@ -48,7 +47,8 @@
             <div class="form-group">
               <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+            <div id="formResult" style="margin-top: 15px; font-weight: 500; text-align: center; display: none;"></div>
           </form>
         </div>
 
@@ -91,6 +91,55 @@
     toggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       toggle.classList.toggle('active');
+    });
+
+    // Web3Forms AJAX Submission
+    const form = document.getElementById('contactForm');
+    const result = document.getElementById('formResult');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      result.style.display = 'block';
+      result.innerHTML = "Sending...";
+      result.style.color = "#b0b8cc";
+      submitBtn.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              },
+              body: json
+          })
+          .then(async (response) => {
+              let jsonResponse = await response.json();
+              if (response.status == 200) {
+                  result.innerHTML = "✅ Message sent successfully! We'll be in touch soon.";
+                  result.style.color = "#25D366";
+              } else {
+                  console.log(response);
+                  result.innerHTML = jsonResponse.message;
+                  result.style.color = "#ff6b6b";
+              }
+          })
+          .catch(error => {
+              console.log(error);
+              result.innerHTML = "Something went wrong! Please try again later.";
+              result.style.color = "#ff6b6b";
+          })
+          .then(function() {
+              form.reset();
+              submitBtn.disabled = false;
+              setTimeout(() => {
+                  result.style.display = "none";
+              }, 5000);
+          });
     });
   </script>
 </body>

@@ -405,6 +405,7 @@
     .section-header {
       text-align: center;
       margin-bottom: 60px;
+      width: 100%;
     }
 
     .section-header .s-tag {
@@ -440,8 +441,9 @@
       max-width: 1100px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
       gap: 28px;
+      width: 100%;
     }
 
     .vp-card {
@@ -616,15 +618,16 @@
       max-width: 1100px;
       margin: 40px auto 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
       gap: 24px;
+      width: 100%;
     }
 
     .testimonial-card {
       background: linear-gradient(145deg, #0f1b35, #111c36);
       border: 1px solid rgba(249, 199, 79, 0.08);
       border-radius: 22px;
-      padding: 36px 30px;
+      padding: 36px 20px;
       position: relative;
       transition: all 0.35s ease;
       opacity: 0;
@@ -968,6 +971,9 @@
       .vp-grid, .testimonials-grid {
         gap: 20px;
       }
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -992,6 +998,13 @@
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+      .services-strips {
+        grid-template-columns: 1fr;
+      }
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1010,6 +1023,9 @@
       }
       .section-header h2 {
         font-size: 28px;
+      }
+      .footer-content {
+        grid-template-columns: 1fr;
       }
     }
 

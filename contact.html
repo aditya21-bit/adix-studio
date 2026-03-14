@@ -34,15 +34,19 @@
         <!-- Contact Form Card -->
         <div class="contact-card">
           <h3>Send us a Message</h3>
-          <form class="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="43e2b402-4a95-4cb8-9663-e37cb218903b">
+            <!-- Optional: redirect to a specific success page -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required>
+              <input type="text" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Your Email" required>
+              <input type="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <textarea placeholder="Your Message" rows="5"></textarea>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
             <button type="submit" class="submit-btn">Send Message</button>
           </form>

@@ -23,7 +23,8 @@
       text-align: center;
       padding: 100px 20px 80px;
       position: relative;
-      overflow: hidden; /* CRITICAL: Contain background blobs */
+      overflow: hidden;
+      /* CRITICAL: Contain background blobs */
     }
 
     /* animated background blobs */
@@ -968,9 +969,12 @@
 
     /* ---- RESPONSIVE ---- */
     @media (max-width: 1024px) {
-      .vp-grid, .testimonials-grid {
+
+      .vp-grid,
+      .testimonials-grid {
         gap: 20px;
       }
+
       .footer-content {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -980,27 +984,34 @@
       .hero {
         padding-top: 80px;
       }
+
       .hero::before {
-        width: 300px; /* Scale down blobs */
+        width: 300px;
+        /* Scale down blobs */
         height: 300px;
         top: -50px;
         left: -50px;
       }
+
       .hero::after {
         width: 250px;
         height: 250px;
         bottom: -50px;
         right: -30px;
       }
+
       .hero-content {
         padding: 0 10px;
       }
+
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .services-strips {
         grid-template-columns: 1fr;
       }
+
       .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1014,21 +1025,25 @@
         max-width: 320px;
         margin: 0 auto;
       }
-      .btn-primary, .btn-outline {
+
+      .btn-primary,
+      .btn-outline {
         width: 100%;
         text-align: center;
       }
+
       .stats-grid {
         grid-template-columns: 1fr;
       }
+
       .section-header h2 {
         font-size: 28px;
       }
+
       .footer-content {
         grid-template-columns: 1fr;
       }
     }
-
   </style>
 </head>
 
@@ -1082,7 +1097,7 @@
     <div class="reel-inner">
       <p class="reel-label">✦ Watch Our Showreel</p>
       <div class="video-frame" id="reelCard" onclick="openVideo()">
-        <video class="preview-video" muted autoplay loop playsinline>
+        <video class="preview-video" muted autoplay loop>
           <source src="assets/intro.mp4" type="video/mp4">
         </video>
         <div class="play-overlay">
